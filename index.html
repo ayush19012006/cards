@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        .but{
+            background-color: rgb(65, 206, 245);
+            border: none;
+            border: solid black;
+            border-radius: 4px;
+            font-size: large;
+        }
+    </style>
+    <div class="details-container">
+        <h1 id="card-title">Card Details</h1>
+        <p id="card-content"></p>
+    </div>
+    <div class="button">
+        <a href="index2.html"><button class="but">Back to Page</button>
+        </a>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const cardNumber = urlParams.get('card');
+
+        document.getElementById('card-title').textContent = `Card ${cardNumber} Details`;
+        document.getElementById('card-content').textContent = `This is the content for card ${cardNumber}.`;
+        function goBack() {
+        }
+    </script>
+</body>
+</html>
